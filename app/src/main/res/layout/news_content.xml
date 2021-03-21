@@ -4,15 +4,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    >
 
+    <ImageView
+        android:id="@+id/imageNews"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageNews"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/textAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
