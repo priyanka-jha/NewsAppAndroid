@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity(), NewsAdapter.NewsItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setSupportActionBar(toolbar)
+
         fetchData()
 
     }
@@ -81,7 +83,7 @@ class MainActivity : AppCompatActivity(), NewsAdapter.NewsItemClickListener {
     override fun onItemCliced(item: NewsModel) {
 
         val builder: CustomTabsIntent.Builder =  CustomTabsIntent.Builder()
-        val colorInt: Int = Color.parseColor("#FF3700B3")
+        val colorInt: Int = Color.parseColor("#311b92")
         builder.setToolbarColor(colorInt)
         val customTabsIntent: CustomTabsIntent = builder.build()
         customTabsIntent.launchUrl(this, Uri.parse(item.url));
